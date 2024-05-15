@@ -12,7 +12,7 @@ router.get('/create', (req, res) => {
 });
 
 router.post('/create', (req, res) => {
-  // const { title, content } = req.body;
+  const { title, content } = req.body;
   posts.push({ title, content });
   res.redirect('/');
   console.log(req.body);
