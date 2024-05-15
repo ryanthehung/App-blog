@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tạo bài viết mới</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>TẠO BÀI VIẾT MỚI</h1>
+    <form action="/create" method="POST">
+      <div class="form-group">
+        <label for="title">Tiêu đề</label>
+        <input type="text" id="title" name="title" placeholder="Nhập tiêu đề" required>
+      </div>
+      <div class="form-group">
+        <label for="content">Nội dung</label>
+        <textarea id="content" name="content" rows="10" placeholder="Nhập nội dung" required></textarea>
+      </div>
+      <button type="submit" class="button save">Tạo bài viết</button>
+    </form>
+  </div>
+</body>
+
+</html>

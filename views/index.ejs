@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Application</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>DANH SÁCH BÀI ĐĂNG</h1>
+    <div class="posts">
+      <% posts.forEach((post, index)=> { %>
+        <div class="post">
+          <h2>
+            <%= post.title %>
+          </h2>
+          <p>
+            <%= post.content %>
+          </p>
+          <div class="actions">
+            <a class="button edit" href="/edit/<%= index %>">Sửa</a>
+            <form action="/delete/<%= index %>" method="POST" style="display:inline;">
+              <button class="button delete" type="submit">Xóa</button>
+            </form>
+          </div>
+        </div>
+        <% }); %>
+    </div>
+    <a class="button create" href="/create">Tạo bài viết mới</a>
+  </div>
+</body>
+
+</html>
